@@ -1,0 +1,21 @@
+pkgname=gsn-bash
+pkgver=1.0.1
+pkgrel=1
+pkgdesc="GSN is a tool that generates the stupidest, most f#cked-up nicknames."
+arch=('x86_64')
+url="https://github.com/oliwier975PL/GSN-Bash"
+license=('WTFPL')
+provides=('gsn')
+conflicts=('gsn' 'gsn-java')
+depends=('bash')
+source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/oliwier975PL/${pkgname}/archive/v${pkgver}.tar.gz)
+sha256sums=('2f36ac0b0e96974971828a10daf3f02d4bdb01725131ed99d74247bcfa73cb14')
+
+package() {
+  mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin,usr/share/licenses/"${pkgname}"}
+  cp -r "${srcdir}"/GSN-Bash-"${pkgver}"/dictionaries "${pkgdir}"/opt/"${pkgname}"/
+  sed 's/dictionaries/\/opt\/gsn-bash\/dictionaries/g' "${srcdir}"/GSN-Bash-"${pkgver}"/GSN.sh > "${pkgdir}"/opt/"${pkgname}"/gsn
+  chmod 755 "${pkgdir}"/opt/"${pkgname}"/gsn
+  ln -s "${pkgdir}"/opt/"${pkgname}"/gsn "${pkgdir}"/usr/bin/
+  install -Dm644 "${srcdir}"/GSN-Bash-"${pkgver}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
+}
