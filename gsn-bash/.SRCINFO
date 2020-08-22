@@ -1,0 +1,16 @@
+pkgbase = gsn-bash
+	pkgdesc = GSN is a tool that generates the stupidest, most f#cked-up nicknames.
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://github.com/oliwier975PL/GSN-Bash
+	arch = x86_64
+	license = WTFPL
+	depends = bash
+	provides = gsn
+	conflicts = gsn
+	conflicts = gsn-java
+	source = gsn-bash-1.0.1.tar.gz::https://github.com/oliwier975PL/gsn-bash/archive/v1.0.1.tar.gz
+	sha256sums = 2f36ac0b0e96974971828a10daf3f02d4bdb01725131ed99d74247bcfa73cb14
+
+pkgname = gsn-bash
+
