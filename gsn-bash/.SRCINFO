@@ -8,6 +8,7 @@ pkgbase = gsn-bash
 	depends = bash
 	provides = gsn
 	conflicts = gsn
+	conflicts = gsn-git
 	conflicts = gsn-java
 	source = gsn-bash-1.0.2.tar.gz::https://github.com/oliwier975PL/gsn-bash/archive/v1.0.2.tar.gz
 	sha256sums = 8262c559c561ec0f37bc19d4f1872798df62e909f3fbb620587125d8ef5fbfce

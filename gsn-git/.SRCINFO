@@ -1,17 +1,18 @@
-pkgbase = gsn
+pkgbase = gsn-git
 	pkgdesc = GSN is a tool that generates the stupidest, most f#cked-up nicknames.
-	pkgver = 1.0.2
-	pkgrel = 2
+	pkgver = v1.0.2.r12.gda9b903
+	pkgrel = 1
 	url = https://github.com/workonfire/GSN
 	arch = x86_64
 	license = WTFPL
 	depends = python-colorama
 	depends = python-unidecode
-	conflicts = gsn-git
+	provides = gsn
+	conflicts = gsn
 	conflicts = gsn-java
 	conflicts = gsn-bash
-	source = gsn-1.0.2.tar.gz::https://github.com/workonfire/gsn/archive/v1.0.2.tar.gz
-	sha256sums = d7a06ea5bd7f788e8a557041c9efa3d4f49602805e96868f07dd7ffcf0491801
+	source = gsn-git::git+https://github.com/workonfire/gsn.git
+	sha256sums = SKIP
 
-pkgname = gsn
+pkgname = gsn-git
 
