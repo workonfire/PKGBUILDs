@@ -1,13 +1,13 @@
 pkgname=gsn
 pkgver=1.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="GSN is a tool that generates the stupidest, most f#cked-up nicknames."
 arch=('x86_64')
 url="https://github.com/workonfire/GSN"
 license=('WTFPL')
 conflicts=('gsn-java' 'gsn-bash')
 depends=('python-colorama' 'python-unidecode')
-source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/workonfire/${pkgname}/archive/v${pkgver}.tar.gz)
+source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/workonfire/"${pkgname}"/archive/v"${pkgver}".tar.gz)
 sha256sums=('d7a06ea5bd7f788e8a557041c9efa3d4f49602805e96868f07dd7ffcf0491801')
 
 package() {
@@ -17,6 +17,6 @@ package() {
   echo "#!/usr/bin/python" > "${pkgdir}"/opt/"${pkgname}"/gsn
   sed 's/dictionaries/\/opt\/gsn\/dictionaries/g' "${srcdir}"/GSN-"${pkgver}"/GSN.py >> "${pkgdir}"/opt/"${pkgname}"/gsn
   chmod 755 "${pkgdir}"/opt/"${pkgname}"/gsn
-  ln -s "${pkgdir}"/opt/"${pkgname}"/gsn "${pkgdir}"/usr/bin/gsn
+  ln -s /opt/"${pkgname}"/gsn "${pkgdir}"/usr/bin/gsn
 # install -Dm644 "${srcdir}"/GSN-"${pkgver}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
 }

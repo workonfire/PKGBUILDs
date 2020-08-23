@@ -1,7 +1,7 @@
 pkgbase = gsn
 	pkgdesc = GSN is a tool that generates the stupidest, most f#cked-up nicknames.
 	pkgver = 1.0.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/workonfire/GSN
 	arch = x86_64
 	license = WTFPL
