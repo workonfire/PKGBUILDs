@@ -1,6 +1,6 @@
 pkgname=gsn-bash
-pkgver=1.0.1
-pkgrel=2
+pkgver=1.0.2
+pkgrel=1
 pkgdesc="GSN is a tool that generates the stupidest, most f#cked-up nicknames."
 arch=('x86_64')
 url="https://github.com/oliwier975PL/GSN-Bash"
@@ -9,13 +9,12 @@ provides=('gsn')
 conflicts=('gsn' 'gsn-java')
 depends=('bash')
 source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/oliwier975PL/"${pkgname}"/archive/v"${pkgver}".tar.gz)
-sha256sums=('2f36ac0b0e96974971828a10daf3f02d4bdb01725131ed99d74247bcfa73cb14')
+sha256sums=('8262c559c561ec0f37bc19d4f1872798df62e909f3fbb620587125d8ef5fbfce')
 
 package() {
   mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin,usr/share/licenses/"${pkgname}"}
-  cp -r "${srcdir}"/GSN-Bash-"${pkgver}"/dictionaries "${pkgdir}"/opt/"${pkgname}"/
-  sed 's/dictionaries/\/opt\/gsn-bash\/dictionaries/g' "${srcdir}"/GSN-Bash-"${pkgver}"/GSN.sh > "${pkgdir}"/opt/"${pkgname}"/gsn
-  chmod 755 "${pkgdir}"/opt/"${pkgname}"/gsn
-  ln -s /opt/"${pkgname}"/gsn "${pkgdir}"/usr/bin/
+  cp -r "${srcdir}"/GSN-Bash-"${pkgver}"/{GSN.sh,dictionaries} "${pkgdir}"/opt/"${pkgname}"/
+  chmod 755 "${pkgdir}"/opt/"${pkgname}"/GSN.sh
+  ln -s /opt/"${pkgname}"/GSN.sh "${pkgdir}"/usr/bin/gsn
   install -Dm644 "${srcdir}"/GSN-Bash-"${pkgver}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
 }
