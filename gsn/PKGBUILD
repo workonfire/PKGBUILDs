@@ -11,7 +11,6 @@ source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/workonfire/"${pkgname}
 sha256sums=('d7a06ea5bd7f788e8a557041c9efa3d4f49602805e96868f07dd7ffcf0491801')
 
 package() {
-# mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin,usr/share/licenses/"${pkgname}"}
   mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin}
   cp -r "${srcdir}"/GSN-"${pkgver}"/dictionaries "${pkgdir}"/opt/"${pkgname}"/
   echo "#!/usr/bin/python" > "${pkgdir}"/opt/"${pkgname}"/gsn

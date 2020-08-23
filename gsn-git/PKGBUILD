@@ -18,7 +18,7 @@ pkgver() {
 }
 
 package() {
-  mkdir -p "${pkgdir}"/{opt/"${_pkgname}",usr/bin,usr/share/licenses/"${_pkgname}"}
+  mkdir -p "${pkgdir}"/{opt/"${_pkgname}",usr/bin}
   cp -r "${srcdir}"/"${pkgname}"/python/dictionaries "${pkgdir}"/opt/"${_pkgname}"/
   echo "#!/usr/bin/python" > "${pkgdir}"/opt/"${_pkgname}"/GSN.py
   cat "${srcdir}"/"${pkgname}"/python/GSN.py >> "${pkgdir}"/opt/"${_pkgname}"/GSN.py

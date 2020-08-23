@@ -12,7 +12,7 @@ source=("${pkgname}-${pkgver}.tar.gz"::https://github.com/oliwier975PL/"${pkgnam
 sha256sums=('8262c559c561ec0f37bc19d4f1872798df62e909f3fbb620587125d8ef5fbfce')
 
 package() {
-  mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin,usr/share/licenses/"${pkgname}"}
+  mkdir -p "${pkgdir}"/{opt/"${pkgname}",usr/bin}
   cp -r "${srcdir}"/GSN-Bash-"${pkgver}"/{GSN.sh,dictionaries} "${pkgdir}"/opt/"${pkgname}"/
   chmod 755 "${pkgdir}"/opt/"${pkgname}"/GSN.sh
   ln -s /opt/"${pkgname}"/GSN.sh "${pkgdir}"/usr/bin/gsn

@@ -7,3 +7,4 @@
 # Makepkg trash
 src/
 pkg/
+gsn-git/
