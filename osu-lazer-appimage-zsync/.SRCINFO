@@ -1,4 +1,4 @@
-pkgbase = osu-lazer-appimage-zsync-git
+pkgbase = osu-lazer-appimage-zsync
 	pkgdesc = A free-to-win rhythm game. Rhythm is just a click away!
 	pkgver = 2020.1114.0
 	pkgrel = 1
@@ -21,5 +21,5 @@ pkgbase = osu-lazer-appimage-zsync-git
 	sha256sums = e60cde328f1484d4b1505e3e7d446b1052635fddad7f59393a2d458132181e6c
 	sha256sums = c9a8fb0f0711338b98aa12e6e8c30889ca475e7f181578637416b0083c58c663
 
-pkgname = osu-lazer-appimage-zsync-git
+pkgname = osu-lazer-appimage-zsync
 

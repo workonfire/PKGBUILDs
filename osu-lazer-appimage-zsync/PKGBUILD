@@ -1,5 +1,5 @@
 # I have no explanation for what I just did here...
-pkgname=osu-lazer-appimage-zsync-git
+pkgname=osu-lazer-appimage-zsync
 _pkgname=osu-lazer
 pkgver=2020.1114.0
 pkgrel=1
