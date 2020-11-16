@@ -1,5 +1,5 @@
 # I have no explanation for what I just did here...
-pkgname=osu-lazer-appimage-zsync
+pkgname=osu-lazer-appimage-zsync-git
 _pkgname=osu-lazer
 pkgver=2020.1114.0
 pkgrel=1
@@ -39,7 +39,6 @@ build() {
     cd "${srcdir}"
     zsync https://github.com/ppy/osu/releases/download/"${pkgver}"/osu.AppImage.zsync
 }
-
 
 package() {
     install -Dm644 "${srcdir}"/"${_pkgname}".png "${pkgdir}"/usr/share/pixmaps/osu-lazer.png
