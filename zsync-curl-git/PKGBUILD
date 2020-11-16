@@ -6,8 +6,8 @@ pkgdesc="Partial/differential file download client over HTTP(S)."
 arch=('x86_64')
 url="https://github.com/probonopd/${_pkgname}"
 license=('custom:Artistic')
-provides=('zsync')
-conflicts=('zsync') # Comment if you would like to keep regular zsync alongside
+provides=('zsync' 'zsync-curl')
+conflicts=('zsync')
 depends=('glibc')
 source=("${pkgname}"::git+"${url}".git)
 sha256sums=('SKIP')
@@ -27,6 +27,6 @@ package() {
   #mkdir -p "${pkgdir}"/usr
   cd "${srcdir}"/"${pkgname}"/src
   make prefix="${pkgdir}"/usr install
-  ln -s /usr/bin/zsync_curl "${pkgdir}"/usr/bin/zsync # Comment if you would like to keep regular zsync alongside
+  ln -s /usr/bin/zsync_curl "${pkgdir}"/usr/bin/zsync
   install -Dm644 "${pkgdir}"/usr/share/doc/zsync_curl/COPYING "${pkgdir}"/usr/share/licenses/"${_pkgname}"/COPYING
 }
