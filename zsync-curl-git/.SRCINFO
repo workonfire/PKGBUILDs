@@ -1,0 +1,15 @@
+pkgbase = zsync-curl-git
+	pkgdesc = Partial/differential file download client over HTTP(S).
+	pkgver = r84.f50d212
+	pkgrel = 1
+	url = https://github.com/probonopd/zsync-curl
+	arch = x86_64
+	license = custom:Artistic
+	depends = glibc
+	provides = zsync
+	conflicts = zsync
+	source = zsync-curl-git::git+https://github.com/probonopd/zsync-curl.git
+	sha256sums = SKIP
+
+pkgname = zsync-curl-git
+

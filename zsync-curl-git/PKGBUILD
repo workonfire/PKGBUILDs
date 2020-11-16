@@ -1,0 +1,32 @@
+pkgname=zsync-curl-git
+_pkgname=zsync-curl
+pkgver=r84.f50d212
+pkgrel=1
+pkgdesc="Partial/differential file download client over HTTP(S)."
+arch=('x86_64')
+url="https://github.com/probonopd/${_pkgname}"
+license=('custom:Artistic')
+provides=('zsync')
+conflicts=('zsync') # Comment if you would like to keep regular zsync alongside
+depends=('glibc')
+source=("${pkgname}"::git+"${url}".git)
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "${pkgname}"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "${srcdir}"/"${pkgname}"/src
+  export CFLAGS=--std=c99
+  ./configure --prefix="${pkgdir}"/usr && make
+}
+
+package() {
+  #mkdir -p "${pkgdir}"/usr
+  cd "${srcdir}"/"${pkgname}"/src
+  make prefix="${pkgdir}"/usr install
+  ln -s /usr/bin/zsync_curl "${pkgdir}"/usr/bin/zsync # Comment if you would like to keep regular zsync alongside
+  install -Dm644 "${pkgdir}"/usr/share/doc/zsync_curl/COPYING "${pkgdir}"/usr/share/licenses/"${_pkgname}"/COPYING
+}
