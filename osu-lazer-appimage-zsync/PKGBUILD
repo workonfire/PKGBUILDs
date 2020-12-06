@@ -1,7 +1,7 @@
 # I have no explanation for what I just did here...
 pkgname=osu-lazer-appimage-zsync
 _pkgname=osu-lazer
-pkgver=2020.1121.0
+pkgver=2020.1204.0
 pkgrel=1
 pkgdesc="A free-to-win rhythm game. Rhythm is just a click away!"
 arch=('x86_64')

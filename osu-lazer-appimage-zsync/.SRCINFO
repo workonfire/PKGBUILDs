@@ -1,6 +1,6 @@
 pkgbase = osu-lazer-appimage-zsync
 	pkgdesc = A free-to-win rhythm game. Rhythm is just a click away!
-	pkgver = 2020.1121.0
+	pkgver = 2020.1204.0
 	pkgrel = 1
 	url = https://github.com/ppy/osu
 	arch = x86_64
