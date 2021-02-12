@@ -1,5 +1,5 @@
 pkgname=gadu-gadu
-pkgver=12.4.103.12162
+pkgver=12.4.104.12172
 pkgrel=1
 pkgdesc="Gadu-Gadu is a Polish instant messaging client using a proprietary protocol."
 arch=('i686' 'x86_64')
@@ -12,8 +12,8 @@ source_x86_64=(gg_64bit_"${pkgver}".tar.bz2::http://im-updates.gg.pl/phoenix/app
 source_i686=(gg_32bit_"${pkgver}".tar.bz2::http://im-updates.gg.pl/phoenix/app/release/"${pkgver}"/standard/Linux_x86-gcc3/pl/gg_32bit.tar.bz2)
 sha256sums=('8137b434801ad2f7a2a6ec5bf731e41dd381839ce55dca4082634764cea53c78'
             'cfc55261aacbb25bdf65b3a05875cf106e1e1877b220c39ede863ee6a9631b7c')
-sha256sums_x86_64=('db771a15c2fb0558feeeecb92f0be31fe5a5a6f62b0e487c77788d71dee13031')
-sha256sums_i686=('85772708011d457ba4c7ae2aceeaf1338b4e3081cc9c72bae3b7ae534a8d50ac')
+sha256sums_i686=('d53eefd156b3181057ff82738ab572bf979301ff138ce6e1c9c11bc98f809231')
+sha256sums_x86_64=('fc19358fe2cb1114158630825ca520a579fc6165383d37cfedc38991c162ea98')
 options=(!strip)
 
 package() {
