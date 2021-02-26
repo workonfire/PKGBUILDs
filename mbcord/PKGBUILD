@@ -9,6 +9,7 @@ license=('MIT')
 depends=('gtk3' 'nss' 'libxss')
 source_i686=("${_pkgname}"-linux-ia32.zip::"${url}"/releases/download/"${pkgver}"/"${_pkgname}"-linux-ia32.zip)
 source_x86_64=("${_pkgname}"-linux-x64.zip::"${url}"/releases/download/"${pkgver}"/"${_pkgname}"-linux-x64.zip)
+sha256sums_i686=('8ce0bf1a188f43887dcfb437431b9865a8bb2c24ca9252692ec8ccc575604e94')
 sha256sums_x86_64=('00a768adfb322fef94446258d4ba81c21b5bfe36ac41e703b70601ab4926a478')
 
 package() {
