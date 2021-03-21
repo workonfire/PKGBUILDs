@@ -5,6 +5,7 @@ pkgdesc="Gadu-Gadu is a Polish instant messaging client using a proprietary prot
 arch=('i686' 'x86_64')
 url="https://gg.pl"
 license=('custom')
+depends=('gtk2' 'java-runtime' 'alsa-lib' 'dbus-glib')
 optdepends=('flashplugin: needed for avatar editor')
 source=("${pkgname}".desktop::https://raw.githubusercontent.com/oliwier975PL/PKGBUILDs/master/"${pkgname}"/"${pkgname}".desktop
         "${pkgname}"::https://raw.githubusercontent.com/oliwier975PL/PKGBUILDs/master/"${pkgname}"/"${pkgname}")
