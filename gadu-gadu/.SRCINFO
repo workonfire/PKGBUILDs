@@ -1,7 +1,7 @@
 pkgbase = gadu-gadu
 	pkgdesc = A Polish instant messaging client using a proprietary protocol.
 	pkgver = 12.4.105.12185
-	pkgrel = 2
+	pkgrel = 3
 	url = https://gg.pl
 	arch = i686
 	arch = x86_64
