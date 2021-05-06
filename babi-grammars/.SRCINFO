@@ -1,4 +1,4 @@
-pkgbase = python-babi-grammars
+pkgbase = babi-grammars
 	pkgdesc = Grammars for babi text editor
 	pkgver = 0.0.24
 	pkgrel = 1
@@ -9,5 +9,5 @@ pkgbase = python-babi-grammars
 	source = https://github.com/asottile/babi-grammars/archive/v0.0.24.tar.gz
 	md5sums = a1db1346669563b471627c2818f3c47e
 
-pkgname = python-babi-grammars
+pkgname = babi-grammars
 
